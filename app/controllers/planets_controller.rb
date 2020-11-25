@@ -4,7 +4,12 @@ class PlanetsController < ApplicationController
   end 
 
   def show
-    @planet = Planet.find(params[:id])
+    find_planet
   end 
 
+  private
+
+  def find_planet
+    @planet = Planet.find(params[:id])
+  end
 end
